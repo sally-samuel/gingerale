@@ -2,8 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
-
   }
 
   
@@ -12,6 +10,12 @@
     border-bottom: 5px solid rgb(8, 8, 107); 
     background-color: #f8f9fa; 
   }
+
+  .navbar-brand img {
+    height: 30px;
+    padding-left: 0; /* Removed padding */
+    margin-right: 15px; /* Optional spacing from nav links */
+}
 
   .navbar-brand img {
     height: 30px;
@@ -28,7 +32,6 @@
     color: greenyellow;
   }
 
-  
   .navbar-toggler {
     border: 1px solid rgb(8, 8, 107);
   }
@@ -181,7 +184,12 @@
       }
       
   }
-
+  
+  @media (max-width: 768px) {
+    .navbar-brand img {
+      height: 32px;
+    }
+    }
   @media (max-width: 875px) {
     .div1 img{
       overflow: hidden;
