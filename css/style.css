@@ -188,10 +188,20 @@
   }
   
   @media (max-width: 768px) {
-    .navbar-brand img {
-      height: 32px;
+    
+@media (max-width: 768px) {
+  .navbar-brand img {
+    height: 32px;
+  }
+    .body {
+      background-image: url("../images/background.jpg"); 
+      background-attachment: fixed; 
+      background-size: cover;
+      background-position: center;
+      
     }
-    }
+  }
+    
   @media (max-width: 875px) {
     .div1 img{
       overflow: hidden;
