@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
+
   }
 
   
@@ -13,17 +15,15 @@
 
   .navbar-brand img {
     height: 30px;
-    padding-left: 0; /* Removed padding */
-    margin-right: 15px; /* Optional spacing from nav links */
+    padding-left: 0;
+    margin-right: 15px; 
 }
 
   .navbar-brand img {
     height: 30px;
     padding-left: 80px;
   }
-#navbarNav{
-    padding-right: 60px;
-  }
+
   .navbar-nav .nav-link {
     color: rgb(18, 18, 142);
     font-size: 20px;
@@ -47,8 +47,14 @@
     background-repeat: no-repeat;
     height:96vh ;
     text-align: center;
-    
-
+    min-height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+   
    
 }
 .carousel-control-prev-icon,
@@ -185,23 +191,19 @@
         overflow: hidden;
       }
       
-  }
-  
-  @media (max-width: 768px) {
-    
-@media (max-width: 768px) {
-  .navbar-brand img {
-    height: 32px;
-  }
-    .body {
-      background-image: url("../images/background.jpg"); 
-      background-attachment: fixed; 
-      background-size: cover;
-      background-position: center;
       
+  }
+  @media (max-width: 600px) {
+    .div1 h1 {
+      font-size: 32px;
+      padding-top: 100px;
+    }
+  
+    .div1 p {
+      font-size: 18px;
     }
   }
-    
+  
   @media (max-width: 875px) {
     .div1 img{
       overflow: hidden;
@@ -232,4 +234,4 @@
       display: block;
     }
     }
-   
+    
