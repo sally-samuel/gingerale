@@ -15,8 +15,8 @@
 
   .navbar-brand img {
     height: 30px;
-    padding-left: 0;
-    margin-right: 15px; 
+    padding-left: 0; /* Removed padding */
+    margin-right: 15px; /* Optional spacing from nav links */
 }
 
   .navbar-brand img {
@@ -47,14 +47,8 @@
     background-repeat: no-repeat;
     height:96vh ;
     text-align: center;
-    min-height: 100vh;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 2rem;
-   
+    
+
    
 }
 .carousel-control-prev-icon,
@@ -191,19 +185,8 @@
         overflow: hidden;
       }
       
-      
   }
-  @media (max-width: 600px) {
-    .div1 h1 {
-      font-size: 32px;
-      padding-top: 100px;
-    }
-  
-    .div1 p {
-      font-size: 18px;
-    }
-  }
-  
+
   @media (max-width: 875px) {
     .div1 img{
       overflow: hidden;
@@ -233,5 +216,4 @@
     .menu-icon {
       display: block;
     }
-    }
-    
+  }
