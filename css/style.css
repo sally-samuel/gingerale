@@ -21,7 +21,9 @@
     height: 30px;
     padding-left: 80px;
   }
-
+#navbarNav{
+    padding-right: 60px;
+  }
   .navbar-nav .nav-link {
     color: rgb(18, 18, 142);
     font-size: 20px;
