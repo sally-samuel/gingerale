@@ -2,8 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
-
   }
 
   
@@ -13,6 +11,9 @@
     background-color: #f8f9fa; 
   }
 
+#navbarNav{
+  padding-right: 40px;
+}
   .navbar-brand img {
     height: 30px;
     padding-left: 0; /* Removed padding */
@@ -56,9 +57,6 @@
   background-color: black !important; 
   
 }
-
-
-  
 
   .div1 h1 {
     padding-top: 250px;
