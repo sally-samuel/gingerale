@@ -62,7 +62,7 @@ a {
   transition: transform 0.3s ease;
 }
 .btn-solar {
-  background-color: yellowgreen; 
+  background-color: yellowgreen !important; 
   color: #fff;
   transition: transform 0.3s;
   border: none;
