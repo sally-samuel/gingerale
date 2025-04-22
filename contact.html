@@ -17,7 +17,31 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
  
-  
+  !-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9Q5XP3EFMS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+
+      // Consent management placeholder (update based on your consent tool)
+      gtag('consent', 'default', {
+       'analytics_storage': 'granted',
+       'ad_storage': 'granted'
+    });
+
+
+      // Initialize Google Analytics with error handling
+      try {
+        gtag('js', new Date());
+        gtag('config', 'G-9Q5XP3EFMS', {
+          'send_page_view': true,
+          'debug_mode': false, // Set to true for testing
+          'allow_enhanced_conversions': true // Enable enhanced measurement
+        });
+      } catch (e) {
+        console.error('Google Analytics failed to load:', e);
+      }
+    </script>
   
 </head>
 
