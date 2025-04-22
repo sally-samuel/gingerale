@@ -12,18 +12,39 @@
     <!-- Animate on Scroll -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-   
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9Q5XP3EFMS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+
+      // Consent management placeholder (update based on your consent tool)
+      gtag('consent', 'default', {
+       'analytics_storage': 'granted',
+       'ad_storage': 'granted'
+    });
+
+
+      // Initialize Google Analytics with error handling
+      try {
+        gtag('js', new Date());
+        gtag('config', 'G-9Q5XP3EFMS', {
+          'send_page_view': true,
+          'debug_mode': false, // Set to true for testing
+          'allow_enhanced_conversions': true // Enable enhanced measurement
+        });
+      } catch (e) {
+        console.error('Google Analytics failed to load:', e);
+      }
+    </script>
 </head>
 <body>
-  
-  
   <div>
-    
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <span class="navbar-brand" >
+        <span class="navbar-brand">
           <img src="./images/LPVTs logo.svg" alt="Logo" />
         </span>
         <button
@@ -31,35 +52,30 @@
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="solutions.html">Solutions</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html" onclick="gtag('event', 'click', { 'event_category': 'Navigation', 'event_label': 'Home' });">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="solutions.html" onclick="gtag('event', 'click', { 'event_category': 'Navigation', 'event_label': 'Solutions' });">Solutions</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html" onclick="gtag('event', 'click', { 'event_category': 'Navigation', 'event_label': 'About' });">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html" onclick="gtag('event', 'click', { 'event_category': 'Navigation', 'event_label': 'Contact' });">Contact</a></li>
           </ul>
         </div>
       </div>
     </nav>
-
-
   </div>
 
-
-<div class="body" id="Home">
-  
-  <div class="div1">
-    <h1 >Sustainable Solar Solutions</h1>
-    <p >Power your home & business with clean, reliable energy</p>
-    
-</div>
-
-</div>
-
-
+  <div class="body" id="Home">
+    <div class="div1">
+      <h1>Sustainable Solar Solutions</h1>
+      <p>Power your home & business with clean, reliable energy</p>
+    </div>
+  </div>
 
   <!-- Services Section -->
   <section class="container my-4 services">
@@ -87,190 +103,149 @@
           <img src="./images/maintenance.jpg" class="card-img-top mx-auto" style="width:150px;" alt="Monitoring">
           <div class="card-body">
             <h5 class="card-title">Monitoring & Maintenance</h5>
-            <p class="card-text">Real-time system monitoring,proactive maintenance services.</p>
+            <p class="card-text">Real-time system monitoring, proactive maintenance services.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-
-  
-
-<section class="bg-dark text-white text-center py-5">
-  <div class="container">
-    <h2 class="mb-4">Our Achievements</h2>
-    <div class="row">
-      <div class="col-md-4">
-        <h3 class="counter" data-target="1000">0</h3>
-        <p>Solar Installations</p>
-      </div>
-      <div class="col-md-4">
-        <h3 class="counter" data-target="500">0</h3>
-        <p>Happy Clients</p>
-      </div>
-      <div class="col-md-4">
-        <h3 class="counter" data-target="10">0</h3>
-        <p>Years of Experience</p>
+  <section class="bg-dark text-white text-center py-5">
+    <div class="container">
+      <h2 class="mb-4">Our Achievements</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <h3 class="counter" data-target="1000">0</h3>
+          <p>Solar Installations</p>
+        </div>
+        <div class="col-md-4">
+          <h3 class="counter" data-target="500">0</h3>
+          <p>Happy Clients</p>
+        </div>
+        <div class="col-md-4">
+          <h3 class="counter" data-target="10">0</h3>
+          <p>Years of Experience</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-
-
+  </section>
 
   <!-- Why Choose Us -->
   <section class="why-choose text-center">
     <h2 class="mb-4">Why Choose Us?</h2>
     <ul class="list-unstyled">
-      <li class="mb-2">✔️  Years of Solar Experience</li>
+      <li class="mb-2">✔️ Years of Solar Experience</li>
       <li class="mb-2">✔️ Certified Technicians & Installers</li>
       <li class="mb-2">✔️ Transparent Pricing & Financing Options</li>
       <li>✔️ Comprehensive Warranty Coverage</li>
     </ul>
   </section>
 
-  
-  
-
-
-<div class="container mt-5 text-center">
-  <h2 class="mb-4 fw-bold"> Our Solar Panels</h2>
-
-  <!-- Carousel -->
-  <div id="centeredCarousel" class="carousel slide" data-bs-ride="carousel">
-    
-    <!-- Indicators -->
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#centeredCarousel" data-bs-slide-to="0" class="active"></button>
-      <button type="button" data-bs-target="#centeredCarousel" data-bs-slide-to="1"></button>
-      <button type="button" data-bs-target="#centeredCarousel" data-bs-slide-to="2"></button>
+  <div class="container mt-5 text-center">
+    <h2 class="mb-4 fw-bold"> Our Solar Panels</h2>
+    <div id="centeredCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#centeredCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#centeredCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#centeredCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./images/mono panel.jpg" alt="Mono Panel">
+          <div class="carousel-caption">
+            <h5>Mono Panel</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./images/Poly panel.jpg" alt="Poly Panel">
+          <div class="carousel-caption">
+            <h5>Poly Panel</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./images/thin film solar panel.jpg" alt="Thin Film Solar Panel">
+          <div class="carousel-caption">
+            <h5>Thin Film Solar Panel</h5>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#centeredCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#centeredCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-
-    <!-- Slides -->
-    <div class="carousel-inner ">
-      <div class="carousel-item active ">
-        <img src="./images/mono panel.jpg"alt="Expert 1">
-        <div class="carousel-caption ">
-          <h5>Mono Panel</h5>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="./images/Poly panel.jpg" alt="Expert 2">
-        <div class="carousel-caption">
-          <h5>Poly Panel</h5>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="./images/thin film solar panel.jpg" alt="Expert 3">
-        <div class="carousel-caption">
-          <h5> Thin film solar panel</h5>
-        </div>
-      </div>
-    </div>
-
-    <!-- Controls -->
-    <button class="carousel-control-prev " type="button " data-bs-target="#centeredCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#centeredCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
   </div>
-</div>
 
-<!-- Footer Section -->
-<footer class="bg-dark text-white py-4 mt-5">
-  <div class="container">
+  <!-- Footer Section -->
+  <footer class="bg-dark text-white py-4 mt-5">
+    <div class="container">
       <div class="row">
-          <!-- Company Logo & Social Media -->
-          <div class="col-md-3 text-center text-md-start mb-3">
-              <img src="./images/LPVTs logo.svg" alt="Company Logo" class="mb-2" style="width: 150px; display: block; margin: 0 auto;">
-              <div class="text-center mt-3">
-                  <a href="#" class="me-3" style="color: #9ACD32;"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#" class="me-3" style="color: #9ACD32;"><i class="fab fa-twitter"></i></a>
-                  <a href="#" class="me-3" style="color: #9ACD32;"><i class="fab fa-instagram"></i></a>
-                  <a href="#" style="color: #9ACD32;"><i class="fab fa-linkedin-in"></i></a>
-              </div>
+        <div class="col-md-3 text-center text-md-start mb-3">
+          <img src="./images/LPVTs logo.svg" alt="Company Logo" class="mb-2" style="width: 150px; display: block; margin: 0 auto;">
+          <div class="text-center mt-3">
+            <a href="#" class="me-3" style="color: #9ACD32;"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="me-3" style="color: #9ACD32;"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="me-3" style="color: #9ACD32;"><i class="fab fa-instagram"></i></a>
+            <a href="#" style="color: #9ACD32;"><i class="fab fa-linkedin-in"></i></a>
           </div>
-
-          <!-- Support Section -->
-          <div class="col-md-3 text-center mb-3">
-              <h5 class="fw-bold">Support</h5>
-              <ul class="list-unstyled">
-                  <li><a href="contact.html" class="text-white text-decoration-none"><i class="fas fa-arrow-right me-2"></i>FAQs</a></li>
-                  <li><a href="mailto:info@lpvtsolutions.com" class="text-white text-decoration-none"><i class="fas fa-arrow-right me-2"></i>Email Us</a></li>
-                  <li><a href="contact.html" class="text-white text-decoration-none"><i class="fas fa-arrow-right me-2"></i>Get in Touch</a></li>
-              </ul>
-          </div>
-
-          <!-- Quick Links -->
-          <div class="col-md-3 text-center mb-3">
-              <h5 class="fw-bold">Quick Links</h5>
-              <ul class="list-unstyled">
-                  <li><a href="#Home" class="text-white text-decoration-none">Home</a></li>
-                  <li><a href="solutions.html" class="text-white text-decoration-none">Solutions</a></li>
-                  <li><a href="about.html" class="text-white text-decoration-none">About</a></li>
-                  <li><a href="contact.html" class="text-white text-decoration-none">Contact Us</a></li>
-              </ul>
-          </div>
-
-          <!-- Contact Information -->
-          <div class="col-md-3 text-center text-md-start">
-              <h5>Contact Us</h5>
-              <p><i class="fas fa-map-marker-alt me-2" style="color: #9ACD32;"></i>19b Ilabere Avenue, Ikoyi, Lagos State, Nigeria</p>
-              <p><i class="fas fa-envelope me-2" style="color: #9ACD32;"></i>Email: info@lpvtsolutions.com</p>
-              <p><i class="fas fa-phone me-2" style="color: #9ACD32;"></i>Phone: +234 906 289 2870</p>
-          </div>
+        </div>
+        <div class="col-md-3 text-center mb-3">
+          <h5 class="fw-bold">Support</h5>
+          <ul class="list-unstyled">
+            <li><a href="contact.html" class="text-white text-decoration-none"><i class="fas fa-arrow-right me-2"></i>FAQs</a></li>
+            <li><a href="mailto:info@lpvtsolutions.com" class="text-white text-decoration-none"><i class="fas fa-arrow-right me-2"></i>Email Us</a></li>
+            <li><a href="contact.html" class="text-white text-decoration-none" onclick="gtag('event', 'click', { 'event_category': 'Footer', 'event_label': 'Get in Touch' });"><i class="fas fa-arrow-right me-2"></i>Get in Touch</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 text-center mb-3">
+          <h5 class="fw-bold">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#Home" class="text-white text-decoration-none">Home</a></li>
+            <li><a href="solutions.html" class="text-white text-decoration-none">Solutions</a></li>
+            <li><a href="about.html" class="text-white text-decoration-none">About</a></li>
+            <li><a href="contact.html" class="text-white text-decoration-none">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 text-center text-md-start">
+          <h5>Contact Us</h5>
+          <p><i class="fas fa-map-marker-alt me-2" style="color: #9ACD32;"></i>19b ilabere avenue, ikoyi, · lagos state, nigeria</p>
+          <p><i class="fas fa-envelope me-2" style="color: #9ACD32;"></i>Email: info@lpvtsolutions.com</p>
+          <p><i class="fas fa-phone me-2" style="color: #9ACD32;"></i>Phone: +234 906 289 2870</p>
+        </div>
       </div>
       <div class="text-center mt-3">
-          <p class="mb-0">&copy; 2025 LPVTS. All Rights Reserved.</p>
+        <p class="mb-0">© 2025 LPVTS. All Rights Reserved.</p>
       </div>
-  </div>
-</footer>
+    </div>
+  </footer>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
 
+    // Counter Animation
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+      counter.innerText = '0';
+      const updateCounter = () => {
+        const target = +counter.getAttribute('data-target');
+        const c = +counter.innerText;
+        const increment = target / 200;
+        if (c < target) {
+          counter.innerText = `${Math.ceil(c + increment)}`;
+          setTimeout(updateCounter, 20); // Adjusted for smoother animation
+        } else {
+          counter.innerText = target;
+        }
+      };
+      updateCounter();
+    });
+  </script>
 
-
-
-
-
-
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-
-  // Counter Animation
-  const counters = document.querySelectorAll('.counter');
-  counters.forEach(counter => {
-    counter.innerText = '0';
-    const updateCounter = () => {
-      const target = +counter.getAttribute('data-target');
-      const c = +counter.innerText;
-      const increment = target / 200;
-      if (c < target) {
-        counter.innerText = `${Math.ceil(c + increment)}`;
-        setTimeout(updateCounter, 10);
-      } else {
-        counter.innerText = target;
-      }
-    };
-    updateCounter();
-  });
-</script>
-
-
-
-
-
- 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-
-
-
-
 </body>
-
 </html>
