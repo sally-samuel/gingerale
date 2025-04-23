@@ -29,7 +29,6 @@
        'ad_storage': 'granted'
     });
 
-
       // Initialize Google Analytics with error handling
       try {
         gtag('js', new Date());
@@ -46,8 +45,8 @@
 </head>
 
 <body>
-<div>
   
+<div>
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <span class="navbar-brand" >
@@ -71,9 +70,6 @@
       </div>
     </div>
   </nav>
-
-
-
 </div>
 
   <div class="container py-2">
@@ -99,15 +95,9 @@
 
           <!-- Google Map -->
           <div class="ratio ratio-4x3 mt-3">
-           
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.6317079254404!2d3.4454303!3d6.441317100000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4e2329cccd9%3A0xda2b4308a075fce3!2s19B%20Ilabere%20Ave%2C%20Ikoyi%2C%20Lagos%20106104%2C%20Lagos!5e0!3m2!1sen!2sng!4v1742823203681!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.6317079254404!2d3.4454303!3d6.441317100000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4e2329cccd9%3A0xda2b4308a075fce3!2s19B%20Ilabere%20Ave%2C%20Ikoyi%2C%20Lagos%20106104%2C%20Lagos!5e0!3m2!1sen!2sng!4v1742823203681!5m2!1sen!2sng" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
-      </div>
-
-      <div class="toast-container position-fixed top-0 end-0 p-3">
-        <!-- Toast messages  -->
       </div>
 
       <!-- Contact Form -->
@@ -131,13 +121,12 @@
               <textarea class="form-control" rows="5" id="message" required></textarea>
               <div class="invalid-feedback">Please enter your message.</div>
             </div>
-            <button type="submit" class="btn btn-solar w-100 ">Send Message</button>
+            <button type="submit" class="btn btn-solar w-100">Send Message</button>
           </form>
         </div>
       </div>
     </div>
 
-    
     <!-- Newsletter -->
 <div class="newsletter my-5 text-center" data-aos="zoom-in">
     <h4>Subscribe to Our Newsletter</h4>
@@ -187,7 +176,6 @@
   <!-- Back to Top -->
   <button id="backToTop"><i class="bi bi-arrow-up"></i></button>
 
-  
 <!-- Footer Section -->
 <footer class="bg-dark text-white py-4 mt-5">
   <div class="container">
@@ -233,15 +221,13 @@
           </div>
       
       <div class="text-center mt-3">
-          <p class="mb-0">&copy; 2025 LPVTS. All Rights Reserved.</p>
+          <p class="mb-0">© 2025 LPVTS. All Rights Reserved.</p>
       </div>
   </div>
 </footer>
 
-
 <!-- Add EmailJS SDK -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
@@ -255,41 +241,14 @@
     });
   })();
 
-  // Function to show a toast notification
-  function showToast(message, type = 'success') {
-    const toastContainer = document.querySelector('.toast-container');
-    
-    // Create a new toast element
-    const toastDiv = document.createElement('div');
-    toastDiv.className = `toast align-items-center text-white bg-${type} border-0`;
-    toastDiv.setAttribute('role', 'alert');
-    toastDiv.setAttribute('aria-live', 'assertive');
-    toastDiv.setAttribute('aria-atomic', 'true');
-    
-    // Toast content
-    toastDiv.innerHTML = `
-      <div class="d-flex">
-        <div class="toast-body">
-          ${message}
-        </div>
-        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+  // Function to show an alert message
+  function showAlert(message, type = 'success', targetDiv) {
+    targetDiv.innerHTML = `
+      <div class="alert alert-${type} alert-dismissible fade show" role="alert">
+        ${message}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
     `;
-    
-    // Append toast to container
-    toastContainer.appendChild(toastDiv);
-    
-    // Initialize and show the toast
-    const toast = new bootstrap.Toast(toastDiv, {
-      autohide: true,
-      delay: 1000 
-    });
-    toast.show();
-    
-    // Remove the toast from DOM after it hides
-    toastDiv.addEventListener('hidden.bs.toast', () => {
-      toastDiv.remove();
-    });
   }
 
   // Contact Form Validation and EmailJS
@@ -309,13 +268,13 @@
 
       emailjs.send('service_mhva9q3', 'template_l5xudq4', formData)
         .then((response) => {
-          // Show success toast
-          showToast('Thank you! Your message has been sent.', 'success');
+          // Show success alert
+          showAlert('Thank you! Your message has been sent.', 'success', alertDiv);
           form.reset();
           form.classList.remove('was-validated');
         }, (error) => {
-          // Show error toast
-          showToast('Something went wrong. Please try again later.', 'danger');
+          // Show error alert
+          showAlert('Something went wrong. Please try again later.', 'danger', alertDiv);
         });
     }
   });
@@ -335,13 +294,13 @@
 
       emailjs.send('service_mhva9q3', 'template_l5xudq4', formData)
         .then((response) => {
-          // Show success toast
-          showToast('Thank you for subscribing!', 'success');
+          // Show success alert
+          showAlert('Thank you for subscribing!', 'success', newsletterAlertDiv);
           newsletterForm.reset();
           newsletterForm.classList.remove('was-validated');
         }, (error) => {
-          // Show error toast
-          showToast('Failed to subscribe. Please try again later.', 'danger');
+          // Show error alert
+          showAlert('Failed to subscribe. Please try again later.', 'danger', newsletterAlertDiv);
         });
     }
   });
@@ -359,7 +318,6 @@
     document.documentElement.scrollTop = 0;
   };
 </script>
-
 
 </body>
 </html>
