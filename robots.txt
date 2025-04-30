@@ -1,5 +1,6 @@
 User-agent: *
-Disallow:
+Allow: /
 
-Sitemap:https://test.lpvtsolutions.com/sitemap.xml
+Sitemap: https://test.lpvtsolutions.com/sitemap.xml
+
 
